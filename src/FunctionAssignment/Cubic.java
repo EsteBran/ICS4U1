@@ -3,6 +3,7 @@ package FunctionAssignment;
 public class Cubic extends Function{
 	
 	private double a, b, c, d, x1;
+	private String s;
 
 	Cubic(double a, double b, double c, double d, double x1) {
 			super(-25, 25);
@@ -23,5 +24,11 @@ public class Cubic extends Function{
 	public double derivative(double x) {
 		double slope = 3*a*(x-x1)*(x-x1) + 2*b*(x-x1) + c;
 		return slope;
+	}
+
+	@Override
+	public String toString() {
+		s = a + "(x - (" + x1 + ") + (" + "";
+		return null;
 	}
 }

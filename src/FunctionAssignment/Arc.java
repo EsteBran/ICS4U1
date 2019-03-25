@@ -2,7 +2,8 @@ package FunctionAssignment;
 
 public class Arc extends Function{
 	
-	double r, xcenter, ycenter;
+	private double r, xcenter, ycenter;
+	private String s;
 	
 	public Arc(double r, double xcenter, double ycenter) {
 	super(-25, 25);
@@ -21,6 +22,13 @@ public class Arc extends Function{
 	public double derivative(double x) {
 		double slope = (x-xcenter)*(1 / Math.sqrt((x-xcenter)*(x-xcenter)-r*r));
 		return slope	;
+	}
+
+	@Override
+	public String toString() {
+		s = "y = (" + r*r + " - (x - " + xcenter + ")^2)^0.5 + " +"(" + 
+				+ ycenter + ")";
+		return s;
 	}
 
 }

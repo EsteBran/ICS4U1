@@ -25,9 +25,7 @@ public abstract class Function {
 		return name;
 	}
 	
-	public String toString() {
-		return "";
-	}
+	public abstract String toString();
 	
 	public void setDomain(double x1, double x2) {
 		if (x2 > x1) {
@@ -46,7 +44,7 @@ public abstract class Function {
 	}
 	
 	public boolean undefined(double x2) {
-		if (x2 > 100000.0 || x2 < -100000.0 ) {
+		if (x2 == Double.POSITIVE_INFINITY || x2 == Double.NEGATIVE_INFINITY || x2 == Double.NaN ) {
 			return true;
 		} else {return false;}
 	}
