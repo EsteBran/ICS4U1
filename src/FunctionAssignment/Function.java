@@ -1,5 +1,15 @@
 package FunctionAssignment;
 
+// Tawseef Hanif
+// Mr. Radulovic
+// March 25, 2018
+// Function class: superclass of the hierarchy and an abstract class
+// houses a few normal methods and a few abstract methods that are later
+// overridden in each of its subclasses. The Function class define the domain
+// of a function, the name of the function, and the colour of the function
+// in RGB.
+
+
 public abstract class Function {
 	
 	protected double x1;
@@ -43,8 +53,8 @@ public abstract class Function {
 		return x2;
 	}
 	
-	public boolean undefined(double x2) {
-		if (x2 == Double.POSITIVE_INFINITY || x2 == Double.NEGATIVE_INFINITY || x2 == Double.NaN ) {
+	public boolean undefined(double x) {
+		if (x == Double.POSITIVE_INFINITY || x == Double.NEGATIVE_INFINITY || x == Double.NaN) {
 			return true;
 		} else {return false;}
 	}
