@@ -6,10 +6,12 @@ public class SorterMain {
 
 	public static void main(String[] args) {
 		int[] array = {2,4,9,5,7,1,10,14};
-		Sort s = new Sort();
-		s.setList(array);
+
+		IntegerSorter integer = new IntegerSorter();
+		integer.setList(array);
+		integer.sort(1);
 		
-		System.out.println(Arrays.toString(array));
+		System.out.println(Arrays.toString(integer.sortedList));
 
 	}
 
