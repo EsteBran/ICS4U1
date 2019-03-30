@@ -64,10 +64,32 @@ public class IntegerSorter implements Sorter {
     public int[] combineArray (int[] listA, int[] listB) {
 
         combinedList = new int[listA.length + listB.length];
-
-        int a = 0;
-        int b = 0;
-
+        
+        int pointerA = 0;
+        int pointerB = 0;
+        
+        for (int i = 0; i < combinedList.length; i++) {
+        	if (pointerA > listA.length - 1) {
+        		combinedList[i]= listB[pointerB];
+        		pointerB++;
+        		
+        	}
+        	else if (pointerB > listB.length - 1) {
+        		combinedList[i] = listA[pointerA];
+        		pointerA++;
+        		
+        	}
+        	else if (listA[pointerA] < listB[pointerB]) {
+        		combinedList[i] = listA[pointerA];
+        		pointerA++;
+        		
+        	}
+        	else {
+        		combinedList[i] = listB[pointerB];
+        		pointerB++;
+        		
+        	}
+        }
 
         return combinedList;
     }
