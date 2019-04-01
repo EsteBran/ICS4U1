@@ -1,5 +1,10 @@
 package AlgorithmPractice;
 
+// Tawseef Hanif
+// Mr. Radulovic
+// March 31, 2018
+// IntegerSorter class: This class implements the sorter interface to sort
+// unsorted lists using 3 different sorting methods, depending on the one invoked.
 
 public class IntegerSorter implements Sorter {
 

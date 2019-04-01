@@ -3,6 +3,13 @@ package AlgorithmPractice;
 import java.util.Arrays;
 import java.util.Random;
 
+// Tawseef Hanif
+// Mr. Radulovic
+// March 31, 2018
+// SorterMain class: this class houses the main method and tests the time taken to sort an array of
+// size n. Also houses a method to generate an array of pseudorandom integers between 1 and 1,000,000. For testing consistently,
+// the pseudorandom list was generated with the same list for all three methods.
+
 
 public class SorterMain {
 
