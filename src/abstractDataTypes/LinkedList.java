@@ -2,31 +2,51 @@ package abstractDataTypes;
 
 public class LinkedList implements ListIntADT{
 
-	public LinkedList() {
-		// TODO Auto-generated constructor stub
-	}
+
+
+	ListNode head;
+
 
 	@Override
-	public int get(int i) {
-		// TODO Auto-generated method stub
+	public int get(int i) { //gets the data at position i, if i exceeds the size of list it just gets the last element
+		int counter = 0;
+		ListNode n = head;
+
+		if (n.next != null) {
+			n = n.next;
+			counter++;
+
+			if (counter == i) {
+			return
+			}
+		}
+
+
+
+
+
 		return 0;
 	}
 
 	@Override
 	public void insert(int i, int j) {
-		// TODO Auto-generated method stub
+
+		ListNode node = new ListNode(j);
+		node.next = null;
+
+
 		
 	}
 
 	@Override
 	public void remove(int i) {
-		// TODO Auto-generated method stub
+
 		
 	}
 
 	@Override
 	public void removeAt(int i) {
-		// TODO Auto-generated method stub
+
 		
 	}
 

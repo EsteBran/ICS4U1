@@ -37,7 +37,7 @@ public class SorterMain {
 		System.out.println("Execution time in seconds: " + (double)timeElapsed/1e+9);
 	}
 
-	//creates an array of size n filled with random numbers between 1 and 10,000 with a given seed
+	//creates an array of size n filled with random numbers between 1 and 1,000,000 with a given seed
 	public int[] generateArray(int size) {
 
 		int[] arr = new int[size];
