@@ -1,5 +1,11 @@
 package AlgorithmPractice;
 
+// Tawseef Hanif
+// Mr. Radulovic
+// March 31, 2018
+// Sort interface: this is the interface for the sorting methods, allows for implementing sorting algorithms
+// to sort unsorted lists into sorted lists going from smallest to largest.
+
 public interface Sorter {
 	/**
 	 * This method sets the current list that is used in this class.  The original list should never be changed.  

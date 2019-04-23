@@ -1,15 +1,22 @@
 package AlgorithmPractice;
 
-import java.util.Arrays;
+// Tawseef Hanif
+// Mr. Radulovic
+// March 31, 2018
+// IntegerSorter class: This class implements the sorter interface to sort
+// unsorted lists using 3 different sorting methods, depending on the one invoked.
 
 public class IntegerSorter implements Sorter {
 
     protected int[] list, sortedList, combinedList;
 
+
+
     @Override
     public void setList(int[] list) {
         this.list = list;
         sortedList = list.clone();
+
     }
 
     @Override
@@ -52,15 +59,24 @@ public class IntegerSorter implements Sorter {
                 }
 
             }
+            /*
+             * Splits methods iteratively until there are n arrays with size one
+             * (I did it preemptivey), then iteratively combines
+             * arrays until there is one sorted array of size n.
+             */
             else if (type == 3) {
 
+               sortedList = sort_method3(list);
 
 
             }
         }
 
     }
-
+    /*
+     * combines two sorted lists of arbitrary size (within int bounds)
+     * into one sorted list. Input lists must be sorted. Returns the combined list.
+     */
     public int[] combineArray (int[] listA, int[] listB) {
 
         combinedList = new int[listA.length + listB.length];
@@ -93,5 +109,49 @@ public class IntegerSorter implements Sorter {
 
         return combinedList;
     }
+
+    /**
+     * Splits the array list in half, returning the 2 parts as an array of 2 arrays
+     * @param list
+     * @return
+     */
+    private int[][] splitArray(int[] list)
+    {
+        int[] A = new int[list.length/2];
+        int[] B = new int[list.length/2];
+        int[][] C = new int[2][];
+
+        for(int i=0; i<list.length/2; i++)
+        {
+            A[i] = list[i];
+            B[i] = list[i+list.length/2];
+        }
+        C[0] = A;
+        C[1] = B;
+        return C;
+    }
+
+
+    protected int[]  sort_method3(int[] list)
+    {
+        int[][] split = new int[2][];
+        int[] A=null;
+        int[] B=null;
+        int[] C=null;
+        if(list.length>1) {
+            split = splitArray(list);
+            A = sort_method3(split[0]);
+            B = sort_method3(split[1]);
+
+        }else
+            return list;
+
+        if(A!=null && B!=null)
+            C = combineArray(A, B);
+
+        return C;
+
+    }
+
 
 }
